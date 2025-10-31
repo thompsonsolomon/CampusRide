@@ -22,7 +22,7 @@ const HandleDownloadOnPlayStore = () => {
 
   // Simulate the redirect after a short delay
   setTimeout(() => {
-    window.open("https://expo.dev/accounts/reythompson/projects/my-app/builds/79029984-4323-4b2b-b7a8-fa1fbc7065df", "_blank");
+    window.open("https://expo.dev/accounts/reythompson/projects/campusride/builds/f3abfd1a-b69a-4195-b5b6-51dd40fb479a", "_blank");
   }, 3000);
 };
 
