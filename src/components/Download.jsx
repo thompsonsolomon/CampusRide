@@ -1,8 +1,31 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { toast } from "react-toastify"
 
 export default function Download() {
+
+  const HandleDownloadOnAppStore = () => {
+    toast.info("ios version is not available at the moment, check back later or kindly download the android ")
+  }
+
+const HandleDownloadOnPlayStore = () => {
+  toast.info("Redirecting ...", {
+    autoClose: 1500,
+  });
+
+  setTimeout(() => {
+    toast.success("Opening campus ride Store. Please wait...", {
+      autoClose: 2000,
+    });
+  }, 1500);
+
+  // Simulate the redirect after a short delay
+  setTimeout(() => {
+    window.open("https://expo.dev/artifacts/eas/kH7ciTRNwczL5Mk1T4VT1Q.aab", "_blank");
+  }, 3000);
+};
+
   return (
     <section id="download" className="py-20 px-4 relative">
       <div className="max-w-4xl mx-auto">
@@ -32,6 +55,7 @@ export default function Download() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={HandleDownloadOnAppStore}
                 className="px-8 py-4 bg-white text-slate-900 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors"
               >
                 <span>🍎</span> App Store
@@ -39,6 +63,7 @@ export default function Download() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={HandleDownloadOnPlayStore}
                 className="px-8 py-4 bg-white text-slate-900 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors"
               >
                 <span>🤖</span> Google Play

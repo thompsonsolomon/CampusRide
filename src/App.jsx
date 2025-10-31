@@ -8,7 +8,6 @@ import HowItWorks from "./components/HowItWorks"
 import WhyChoose from "./components/WhyChoose"
 import Download from "./components/Download"
 import Footer from "./components/Footer"
-
 function App() {
   const [scrollY, setScrollY] = useState(0)
 

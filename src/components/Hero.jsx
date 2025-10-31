@@ -62,24 +62,27 @@ export default function Hero({ scrollY }) {
 
         {/* CTA Buttons */}
         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <motion.button
-            whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(255, 215, 0, 0.4)" }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-yellow-400 text-slate-900 rounded-full font-bold text-lg hover:bg-yellow-300 transition-colors glow-gold"
-          >
-            Get the App
-          </motion.button>
+          <a href="#download">
+
+            <motion.button
+              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(255, 215, 0, 0.4)" }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-yellow-400 text-slate-900 rounded-full font-bold text-lg hover:bg-yellow-300 transition-colors glow-gold"
+            >
+              Get app on MVP
+            </motion.button>
+          </a>
           <motion.button
             whileHover={{ scale: 1.05, borderColor: "#ffd700" }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-4 border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white/10 transition-colors"
           >
-            Become a Rider
+            Join Our Wait List
           </motion.button>
         </motion.div>
 
         {/* Floating Phone Mockup */}
-        <motion.div
+        {/* <motion.div
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
           className="relative mx-auto w-full max-w-sm"
@@ -92,7 +95,7 @@ export default function Hero({ scrollY }) {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </section>
   )
